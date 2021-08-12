@@ -2,7 +2,12 @@
 
 DeviseTokenAuth.setup do |config|
   bypass_sign_in = false 
-  config.default_confirm_success_url = "confirmed"
+  
+  #config.default_confirm_success_url = "http://localhost:3000"
+
+  # By default, url points to testing. For production override param "redirect_url" with
+  # production webhost
+  config.default_password_reset_url = "/api/auth/users/password/edit"
 
   # By default the authorization headers will change after each request. The
   # client is responsible for keeping track of the changing tokens. Change
