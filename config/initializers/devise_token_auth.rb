@@ -7,7 +7,7 @@ DeviseTokenAuth.setup do |config|
 
   # By default, url points to testing. For production override param "redirect_url" with
   # production webhost
-  config.default_password_reset_url = "http://localhost:3000/api/auth/users/password/edit"
+  config.default_password_reset_url = "/api/auth/users/password/edit"
 
   # By default the authorization headers will change after each request. The
   # client is responsible for keeping track of the changing tokens. Change
