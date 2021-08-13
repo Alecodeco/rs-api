@@ -6,5 +6,8 @@ Rails.application.routes.draw do
       registrations: 'api/auth/registrations',
       passwords:     'api/auth/passwords'
     }
+
+    get 'topics', action: :index, controller: 'topics'
   end
+
 end
