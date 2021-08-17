@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       passwords:     'api/auth/passwords'
     }
 
-    get 'topics', action: :index, controller: 'topics'
+    resources :topics, only: :index
   end
 
 end
