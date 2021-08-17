@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'Sign In user via POST', type: :request do
-  let!(:user) { create(:user) }
+  let!(:user) { create(:user) }  
 
-  it "should sign in when given valid user and password" do    
+  it "should succeed when given valid user and password" do
     post '/api/auth/users/sign_in', params: { email: 'test@mail.com', password: 'testing' }    
     expect(response).to have_http_status(:ok)
   end
