@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe User, :focus, :type => :model do
+RSpec.describe User, :type => :model do
   it "is invalid when given less-than-8-characters password" do
     expect{
       create(:user, password: "test", password_confirmation: "test")
