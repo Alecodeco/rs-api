@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 class User < ActiveRecord::Base  
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
+  devise :registerable, :recoverable, :rememberable, :trackable,
+         :validatable,  :database_authenticatable
+
   include DeviseTokenAuth::Concerns::User
+  
   before_validation :set_uid
   
   def set_uid

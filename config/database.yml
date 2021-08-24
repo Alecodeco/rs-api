@@ -23,7 +23,7 @@ test:
   <<: *default
   database: rs-api-test
   user: root
-  password: 
+  password: <%= Rails.application.credentials.databases[:db_password] %>
 
 production:
   <<: *default
