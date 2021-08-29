@@ -6,5 +6,8 @@ Rails.application.routes.draw do
       registrations: 'api/auth/registrations',
       passwords:     'api/auth/passwords'
     }
+
+    resources :topics, only: :index
   end
+
 end
