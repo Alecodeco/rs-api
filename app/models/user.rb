@@ -34,8 +34,8 @@
 #  index_users_on_uid_and_provider      (uid,provider) UNIQUE
 #
 class User < ActiveRecord::Base  
-  devise :registerable, :recoverable, :rememberable, :trackable,
-         :validatable,  :database_authenticatable
+  devise :registerable, :confirmable, :recoverable, :rememberable, 
+         :trackable, :validatable,  :database_authenticatable
 
   include DeviseTokenAuth::Concerns::User
   
